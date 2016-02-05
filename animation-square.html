@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" charset="utf-8"/>
+	<title>rotateSquare</title>
+	<style>
+/*
+summary
+1，正数的degree是逆时针方向
+2， 注意hover在哪个元素上面
+3，perspective属性
+*/
+
+		body{margin: 0;padding: 0;}
+		.wrap{display: flex;justify-content:center;height: 50px;width: 200px;margin:0 auto;background-color: #beaed4;align-items:center;}
+
+		.container{text-align: center;display: table-cell;vertical-align: middle;width: 1333px;height: 600px;perspective:1000px;}
+		/*一定要加透视属性，否则看不出来*/
+		.squareWrap{display: inline-block;width: 300px;height: 300px;border: 1px black solid;position: relative;}
+		.animation{transform-style:preserve-3d;-webkit-animation:rotate 5s 10s infinite linear both;}
+
+		.square{width: 100%;height: 100%;left:0;top:0;border: 1px black solid;box-sizing: border-box;position: absolute;display: flex;align-items:center;text-align: center;justify-content:center;
+			transition: background-color 1s linear;}
+		.left{-webkit-animation:left 2s ease 0s both;-webkit-animation-fill-mode:both;}
+		.right{-webkit-animation:right 2s ease 2s both;}
+		.top{-webkit-animation:top 2s 4s ease both;}
+		.bottom{-webkit-animation:bottom 2s ease 6s both;}
+		.front{-webkit-animation:front 2s ease 8s both;}
+		.wrap{-webkit-animation: hint 20s linear 5s both;color: white;}
+/*
+		注意hover在哪个元素上，以下是移动到内部元素上变色
+		.square:hover{color: white;}
+		.left:hover{background-color: #a6cee3;}
+		.right:hover{background-color: #1f78b4;}
+		.top:hover{background-color: #b2df8a;}
+		.bottom:hover{background-color: #33a02c;}
+		.front:hover{background-color: #fb9a99;}
+		.back:hover{background-color: #e31a1c;}*/
+
+		/*以下是移动到整体上，全部元素变色*/
+		.squareWrap:hover .square{color: white;}
+		.squareWrap:hover .left{background-color: #a6cee3;}
+		.squareWrap:hover .right{background-color: #1f78b4;}
+		.squareWrap:hover .top{background-color: #b2df8a;}
+		.squareWrap:hover .bottom{background-color: #33a02c;}
+		.squareWrap:hover .front{background-color: #fb9a99;}
+		.squareWrap:hover .back{background-color: #e31a1c;}
+
+
+
+
+
+		/*正数的degree是逆时针方向*/
+		@-webkit-keyframes rotate{
+			100%{-webkit-transform-origin:center center center;-webkit-transform:rotate3D(1,1,1,360deg);}
+		}
+		@-webkit-keyframes hint{
+			0%{-webkit-transform-origin:center center;-webkit-transform:translateY(-1000px); }
+			50%{-webkit-transform-origin:center center;-webkit-transform:translateY(150px); }
+			100%{-webkit-transform-origin:center center;-webkit-transform:translateY(-1000px); }
+
+		}
+
+
+		@-webkit-keyframes left{
+			100%{-webkit-transform-origin:left center;-webkit-transform:rotateY(-90deg);}
+		}
+		@-webkit-keyframes right{
+			100%{-webkit-transform-origin:right center;-webkit-transform:rotateY(90deg);}
+		}
+		@-webkit-keyframes front{
+			100%{-webkit-transform:translateZ(300px);}
+		}
+		@-webkit-keyframes top{
+			/*无冒号*/
+			100%{-webkit-transform-origin:top center;-webkit-transform:rotateX(90deg);}
+		}
+		@-webkit-keyframes bottom{
+			100%{-webkit-transform-origin:bottom center;-webkit-transform:rotateX(-90deg);}
+		}
+
+		/*.container{display: flex;justify-content:center;align-items:center;height: 100%;}
+		.squareWrap{width: 300px;height: 300px;border: 1px black solid;}*/
+
+	</style>
+</head>
+<body>
+<div class="wrap">
+	<div class="hint">hover上去可以变色啦</div>
+</div>
+<div class="container">
+	<div class="squareWrap animation">
+		<div class="square left">left</div>
+		<div class="square right">right</div>
+		<div class="square top">top</div>
+		<div class="square bottom">bottom</div>
+		<div class="square front">front</div>
+		<div class="square back">back</div>
+	</div>
+
+</div>
+
+</body>
+</html>
