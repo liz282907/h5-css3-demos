@@ -6,7 +6,7 @@
 	<style>
 /*
 summary
-1，正数的degree是逆时针方向
+1，正数的degree是逆时针方向（更正：对y轴负方向来说是逆时针，对y轴正轴是顺时针，头朝下为y正轴）
 2， 注意hover在哪个元素上面
 3，perspective属性
 */
@@ -64,6 +64,7 @@ summary
 
 		@-webkit-keyframes left{
 			100%{-webkit-transform-origin:left center;-webkit-transform:rotateY(-90deg);}
+			/*对y轴负方向来说是逆时针，对y轴正轴是顺时针，头朝下为y正轴。*/
 		}
 		@-webkit-keyframes right{
 			100%{-webkit-transform-origin:right center;-webkit-transform:rotateY(90deg);}
