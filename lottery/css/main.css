@@ -1,0 +1,22 @@
+.canvasWrap{
+	width: 300px;
+	height: 300px;
+	position: relative;
+
+	display: block;
+	margin:200px auto;
+}
+.canvasWrap {}
+#outerCircle
+{
+	position: absolute;top:0;left: 0;
+	-webkit-transform-origin: center center;
+	-webkit-transition: rotate 6s linear 0 both;
+	transition: transform 6s;
+}
+/*#outerCircle .startRotate{-webkit-transition: transform 2s ease-out;}*/
+#outerText{position: absolute;top:0;left: 0;}
+#innerMask{position: absolute;top:0;left: 0;}
+#innerCircle{position: absolute;top:0;left: 0;}
+.btn{position: absolute;top:130px;left: 130px;height: 40px;width: 40px;color: white;background: none;outline: none;border: none;font-size: 16px;}
+.btn:hover{cursor: pointer;}
