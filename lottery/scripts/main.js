@@ -32,8 +32,6 @@
 
 
 	}
-
-
 function drawCircles(){
 		outerCanvas = $("#outerCircle")[0];
 		if(outerCanvas.getContext){
