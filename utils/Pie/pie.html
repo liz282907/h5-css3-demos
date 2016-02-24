@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" http-equiv="Content-Type" />
+	<title>pie chart</title>
+	<style>
+		body{
+			font-family: "Microsoft Yahei";
+		}
+		.mainPart{
+			text-align: center;
+		}
+		.canvasContainer{position: relative;text-align: center;height: 400px;margin:40px auto;width: 400px;}
+		#pie,#pieText,#innerCircle{position: absolute;top: 0;left: 0;}
+	</style>
+	<script src="scripts/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+	<div class="mainPart">
+		<p class="title">图9 2014年中国IDS/IPS市场品牌结构</p>
+		<div class="canvasContainer">
+			<canvas id="pie" width="400px" height="400px"></canvas>
+			<canvas id="pieText" width="400px" height="400px"></canvas>
+			<canvas id="innerCircle" width="400px" height="400px"></canvas>
+		</div>
+
+	</div>
+
+<script src="scripts/pie.js"></script>
+</body>
