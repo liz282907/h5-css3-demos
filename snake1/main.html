@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" http-equiv="Content-Type" />
+	<title>snake</title>
+	<link rel="stylesheet" href="css/main.css">
+	<script src="scripts/jquery-1.11.3.min.js"></script>
+
+</head>
+<body>
+	<div class="container">
+		<div class="leftColumn">
+			<ul>
+				<li>得分：<span class="score"></span></li>
+				<li>生命：<span class="life"></span></li>
+				<li>等级：<span class="level"></span></li>
+			</ul>
+
+		</div>
+		<canvas id="canvasBody" height="400px" width="400px"></canvas>
+
+	</div>
+<!-- 第一步选择模式 -->
+	<div id="popupWindow">
+		<div class="pop-content">
+			<h3>游戏规则</h3>
+			<div>
+				<ul>
+					<li><strong>1.</strong> 利用键盘的上下左右键控制贪吃蛇的前进方向方向</li>
+					<li><strong>2.</strong> ESC键退出游戏，P键暂停游戏，R键继续</li>
+					<li><strong>3.</strong> 请选择游戏模式：</li>
+				</ul>
+				<div class="pop-buttons">
+					<button class="pop-normal">普通模式</button>
+					<button class="pop-clock">计时模式</button>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- 第二步，level/计时 -->
+	<div id="popupWindow-level" class="hide">
+			<div class="pop-content normal">
+				<div>
+					<h3>请选择游戏级别</h3>
+					<ul class="pop-buttons">
+						<li><button class="pop-normal level">Level 1</button></li>
+						<li><button class="pop-normal level">Level 2</button></li>
+						<li><button class="pop-normal level">Level 3</button></li>
+						<li><button class="pop-normal level">Level 4</button></li>
+					</ul>
+				</div>
+			</div>
+			<div class="pop-content clock hide">
+				<div>
+					<h3>计时1分钟，食物要超过2哟，ready?</h3>
+					<button class="pop-normal level" id="clock-btn">GO!</button></li>
+				</div>
+			</div>
+	</div>
+<!-- game-over -->
+	<div id="popupWindow-next" class="hide">
+			<div class="pop-content">
+				<div>
+					<h3>oh oh :(</h3>
+					<ul class="pop-buttons">
+						<li><button class="pop-normal level" id="restart">重新再来</button></li>
+					</ul>
+				</div>
+			</div>
+	</div>
+
+<script src="scripts/main.js"></script>
+</body>
+</html>

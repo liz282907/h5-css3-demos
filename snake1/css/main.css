@@ -1,0 +1,84 @@
+body{margin: 0;padding: 0;position: relative;font-family: "Microsoft Yahei";}
+	ul{margin:0;padding: 0;}
+	.leftColumn{width: 200px;background: #ff6666;color: white;height:300px;margin-top: 100px;}
+	.container{display: flex;padding:50px 150px;}
+
+	#canvasBody{display: block;margin:50px auto;width: 400px;}
+	#popupWindow,#popupWindow-level,#popupWindow-next
+	{
+		position: absolute;
+		left:50%;
+		top:50%;
+		transform:translate(-50%,-50%);
+		z-index: 10;
+		max-width: 600px;
+	}
+	#popupWindow-level{z-index: 100;}
+
+	.hide{display: none;}
+	.pop-content
+	{
+		color: #fff;
+		background: #e74c3c;
+		border-radius: 3px;
+		margin: 0 auto;
+	}
+	.pop-content h3 {
+		margin: 0;
+		padding: 0.4em;
+		text-align: center;
+		font-size: 1.5em;
+		font-weight: 300;
+		opacity: 0.8;
+		background: rgba(0,0,0,0.1);
+		border-radius: 3px 3px 0 0;
+	}
+	.pop-content > div
+	{
+		padding: 15px 40px 30px;
+		margin: 0;
+		font-weight: 300;
+		font-size: 1.15em;
+	}
+
+	.pop-content > div ul
+	{
+		margin: 0;
+		list-style: none;
+	}
+
+	.pop-content > div ul li
+	{
+		padding: 5px 0;
+	}
+
+	.pop-buttons{display: flex;}
+
+	.pop-content button
+	{
+		flex:1;
+		margin: 20px 36px 0;
+		display: inline-block;
+		font-size: 0.8em;
+		outline: none;
+		border: none;
+		padding: 0.5em 1.2em;
+		background: #c0392b;
+		color: #fff;
+		font-family: "Microsoft Yahei";
+		font-size: 1em;
+		letter-spacing: 1px;
+		cursor: pointer;
+		border-radius: 2px;
+	}
+	#popupWindow-level button{display:inline-block;margin-left:10px;}
+	button:hover {
+		background: #A5281B;
+	}
+	#popupWindow-level .clock{text-align:center;}
+
+	/***************得分榜*******************/
+	.leftColumn ul{padding:0;margin:0;list-style: none;display: flex;flex-direction:column;font-family: "Microsoft Yahei";}
+	.leftColumn ul li{display:flex;padding:15px 30px;background:rgba(230, 0, 0,0.3);}
+
+
